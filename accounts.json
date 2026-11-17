@@ -1,0 +1,10 @@
+{
+ "pages_base": "https://OWNER.github.io/media/",
+ "148": {"facebook": {"page_id": "", "token_secret": "FB_TOKEN_148"},
+         "instagram": {"ig_user_id": "", "token_secret": "FB_TOKEN_148"},
+         "tiktok": {"channel_id": ""}},
+ "beinenu": {"facebook": {"page_id": "", "token_secret": "FB_TOKEN_BEINENU"},
+             "instagram": {"ig_user_id": "", "token_secret": "FB_TOKEN_BEINENU"},
+             "tiktok": {"channel_id": ""}},
+ "bsora": {"tiktok": {"channel_id": ""}}
+}
