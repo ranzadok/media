@@ -1,0 +1,18 @@
+{
+ "name": "בינינו",
+ "bg": "radial-gradient(120% 80% at 80% 10%,#B5603F 0%,#7A2E22 38%,#5A1F1A 62%,#37150F 100%)",
+ "glow": "rgba(242,197,124,.35)",
+ "text": "#FFF6E8",
+ "accent": "#F2C57C",
+ "headFont": "Frank",
+ "headWeight": 900,
+ "blockBg": "#F2C57C",
+ "blockText": "#37150F",
+ "cardBg": "#FFF6E8",
+ "cardText": "#37150F",
+ "cardSoftBg": "rgba(255,246,232,.14)",
+ "cardSoftBorder": "rgba(255,246,232,.35)",
+ "stampBg": "#5A1F1A",
+ "logoRound": false,
+ "bpm": 84
+}

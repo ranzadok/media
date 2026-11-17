@@ -1,0 +1,20 @@
+{
+ "name": "148 · ניצוץ יומי",
+ "bg": "radial-gradient(110% 70% at 75% 8%,#3a2c14 0%,#1a130a 40%,#0b0907 75%)",
+ "glow": "rgba(224,194,125,.30)",
+ "text": "#e8d5b7",
+ "accent": "#e0c27d",
+ "headFont": "Heebo",
+ "headWeight": 900,
+ "blockBg": "#ffd36b",
+ "blockText": "#0b0907",
+ "cardBg": "#e8d5b7",
+ "cardText": "#0b0907",
+ "cardSoftBg": "rgba(224,194,125,.10)",
+ "cardSoftBorder": "rgba(224,194,125,.35)",
+ "stampBg": "#0b0907",
+ "logoRound": true,
+ "bpm": 96,
+ "chords": [[220, 277.18, 329.63], [246.94, 293.66, 369.99], [196, 246.94, 293.66], [185, 233.08, 277.18]],
+ "melody": [880, 739.99, 659.25, 554.37, 659.25, 739.99]
+}

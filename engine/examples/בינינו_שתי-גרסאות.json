@@ -1,0 +1,8 @@
+{"app":"בינינו","scenes":[
+ {"type":"title","dur":2.6,"lines":[{"text":"אותו משפט."},{"text":"שתי גרסאות.","accent":true}]},
+ {"type":"bubble","dur":5.6,"style":"angry","text":"את תמיד בטלפון ולא אכפת לך ממני!","tag":"נכתב ברגע של כעס.","stamp":"לא נשלח","tagAt":2.8,"stampAt":3.7},
+ {"type":"bubble","dur":6.2,"style":"calm","text":"אני מרגיש לא חשוב כשאת בטלפון בארוחת ערב, ואני צריך 10 דקות של תשומת לב ממך.","tag":"הגרסה הרגועה. זה מה שעובר.","tagAt":3.7},
+ {"type":"title","dur":3.2,"size":92,"lines":[{"text":"אותה תחושה."},{"text":"דרך אחרת להגיד אותה.","accent":true}]},
+ {"type":"phone","dur":3.8,"image":"screen_stop.jpg"},
+ {"type":"end","dur":3.6,"name":"בינינו","nameSize":170,"sub":"לזוגות שכבר ביחד","pill":"בקרוב בחנויות · הלינק בביו"}
+]}

@@ -1,0 +1,84 @@
+{
+ "app": "בינינו",
+ "bpm": 112,
+ "note": "באנדרואיד: בקרוב · ⁦by zdk.⁩",
+ "scenes": [
+  {
+   "type": "title",
+   "dur": 2.4,
+   "hit": true,
+   "hitAt": 1.25,
+   "lines": [
+    {
+     "text": "זה רשמי."
+    },
+    {
+     "text": "בינינו עלתה"
+    },
+    {
+     "text": "ל-App Store",
+     "block": true
+    }
+   ]
+  },
+  {
+   "type": "bubble",
+   "dur": 4.6,
+   "style": "angry",
+   "text": "שוב אתה לא מקשיב לי!",
+   "tag": "לחיצה אחת. 90 שניות לנשום.",
+   "stamp": "נעצר",
+   "typeDur": 1.2,
+   "tagAt": 2.6,
+   "stampAt": 1.9
+  },
+  {
+   "type": "bubble",
+   "dur": 5.4,
+   "style": "calm",
+   "text": "אני מרגישה שלא שומעים אותי, ואני צריכה חמש דקות שלך בלי טלפון.",
+   "tag": "רק הגרסה הרגועה עוברת.",
+   "tagAt": 3.4
+  },
+  {
+   "type": "phone",
+   "dur": 3.0,
+   "image": "screen_stop.jpg",
+   "caption": "עוצרים. נושמים. מבינים."
+  },
+  {
+   "type": "phone",
+   "dur": 2.8,
+   "image": "screen_home.jpg",
+   "caption": "ולא רק בריבים."
+  },
+  {
+   "type": "title",
+   "dur": 2.6,
+   "size": 130,
+   "hit": true,
+   "hitAt": 1.3,
+   "gap": 0.55,
+   "lines": [
+    {
+     "text": "חינם."
+    },
+    {
+     "text": "בלי הרשמה."
+    },
+    {
+     "text": "בלי פרסומות.",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "dur": 3.6,
+   "name": "בינינו",
+   "nameSize": 170,
+   "sub": "לזוגות שכבר ביחד",
+   "pill": "עכשיו ב-App Store · הלינק בביו"
+  }
+ ]
+}

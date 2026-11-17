@@ -1,0 +1,18 @@
+{
+ "name": "BESORA · בשורה",
+ "bg": "radial-gradient(120% 80% at 75% 10%,#5C173A 0%,#2E1450 45%,#2A0A24 85%)",
+ "glow": "rgba(233,196,106,.32)",
+ "text": "#FFF7EF",
+ "accent": "#E9C46A",
+ "headFont": "Heebo",
+ "headWeight": 900,
+ "blockBg": "#E9C46A",
+ "blockText": "#2A0A24",
+ "cardBg": "#FFF7EF",
+ "cardText": "#2A0A24",
+ "cardSoftBg": "rgba(255,247,239,.10)",
+ "cardSoftBorder": "rgba(255,247,239,.28)",
+ "stampBg": "#4A102E",
+ "logoRound": false,
+ "bpm": 90
+}
