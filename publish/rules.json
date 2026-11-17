@@ -1,0 +1,12 @@
+{
+ "all": {"banned": ["זמין להורדה", "הכי טוב", "מובטח"]},
+ "148": {"banned": ["סגולה", "ישועה", "הלכה:", "מותר", "אסור"], "banned_orange": true,
+         "cta": ["הלינק בביו"], "networks": ["tiktok", "instagram", "facebook"]},
+ "beinenu": {"banned": ["טיפול", "מטפל", "ירפא", "מרפא"],
+             "cta": ["App Store", "הלינק בביו"], "networks": ["tiktok", "instagram", "facebook"]},
+ "bsora": {"banned": ["צפוי לך", "יקרה", "תזכה", "מזל רע", "מסוכן"],
+           "cta": ["הלינק בביו", "עקבו"], "networks": ["tiktok"]},
+ "limits": {"instagram": {"hashtags": 5, "chars": 2200},
+            "tiktok": {"hashtags": 6, "chars": 2200},
+            "facebook": {"hashtags": 3, "chars": 5000}}
+}
