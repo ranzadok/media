@@ -1,0 +1,28 @@
+name: prune-media
+on:
+  schedule:
+    - cron: "17 3 * * 0"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: delete media of posts published more than 30 days ago
+        run: |
+          python3 - <<'PY'
+          import json, glob, os, datetime
+          cut = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=30)
+          for p in glob.glob("queue/*/*.json"):
+              it = json.load(open(p, encoding="utf-8"))
+              when = it.get("published_at")
+              if it.get("status") in ("published", "rejected", "failed") and when and datetime.datetime.fromisoformat(when) < cut:
+                  for m in it.get("media", []):
+                      if os.path.exists(m): os.remove(m)
+          PY
+          git config user.name ryk-bot
+          git config user.email ryk-bot@users.noreply.github.com
+          git add -A m
+          git diff --cached --quiet || (git commit -qm "prune old media" && git push -q)

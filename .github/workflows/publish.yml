@@ -1,0 +1,41 @@
+name: publish
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      now:
+        description: "Pretend time (ISO, for testing), empty = real time"
+        required: false
+concurrency:
+  group: publish
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: git identity
+        run: |
+          git config user.name ryk-bot
+          git config user.email ryk-bot@users.noreply.github.com
+      - name: publish due posts
+        env:
+          FB_TOKEN_148: ${{ secrets.FB_TOKEN_148 }}
+          FB_TOKEN_BEINENU: ${{ secrets.FB_TOKEN_BEINENU }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          NOW: ${{ github.event.inputs.now }}
+        run: python -m publish run --push ${NOW:+--now "$NOW"}
+      - name: save queue state
+        if: always()
+        run: |
+          git add queue
+          git diff --cached --quiet || (git commit -qm "publish: update queue" && git pull -q --rebase && git push -q)
