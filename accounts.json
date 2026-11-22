@@ -1,10 +1,38 @@
 {
  "pages_base": "https://ranzadok.github.io/media/",
- "148": {"facebook": {"page_id": "", "token_secret": "FB_TOKEN_148"},
-         "instagram": {"ig_user_id": "", "token_secret": "FB_TOKEN_148"},
-         "tiktok": {"channel_id": ""}},
- "beinenu": {"facebook": {"page_id": "", "token_secret": "FB_TOKEN_BEINENU"},
-             "instagram": {"ig_user_id": "", "token_secret": "FB_TOKEN_BEINENU"},
-             "tiktok": {"channel_id": ""}},
- "bsora": {"tiktok": {"channel_id": ""}}
+ "148": {
+  "facebook": {
+   "page_id": "",
+   "token_secret": "FB_TOKEN_148"
+  },
+  "instagram": {
+   "ig_user_id": "",
+   "token_secret": "FB_TOKEN_148"
+  },
+  "tiktok": {
+   "channel_id": ""
+  }
+ },
+ "beinenu": {
+  "facebook": {
+   "via": "buffer",
+   "channel_id": "",
+   "key_secret": "BUFFER_API_KEY_BEINENU"
+  },
+  "instagram": {
+   "via": "buffer",
+   "channel_id": "",
+   "key_secret": "BUFFER_API_KEY_BEINENU"
+  },
+  "tiktok": {
+   "via": "buffer",
+   "channel_id": "",
+   "key_secret": "BUFFER_API_KEY_BEINENU"
+  }
+ },
+ "bsora": {
+  "tiktok": {
+   "channel_id": ""
+  }
+ }
 }

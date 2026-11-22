@@ -114,7 +114,15 @@ def _send_instagram(acc, item, urls):
 
 
 def _send_tiktok(acc, item, urls):
-    return buffer.post_tiktok(acc["channel_id"], os.environ["BUFFER_API_KEY"], item, urls)
+    return buffer.post_tiktok(acc["channel_id"], os.environ[acc.get("key_secret", "BUFFER_API_KEY")], item, urls)
+
+
+def _send(acc, item, urls):
+    """Accounts marked "via": "buffer" publish every network through their own Buffer key."""
+    if acc.get("via") == "buffer":
+        return buffer.post(acc["channel_id"], os.environ[acc.get("key_secret", "BUFFER_API_KEY")],
+                           item, urls, service=item["network"])
+    return SENDERS[item["network"]](acc, item, urls)
 
 
 SENDERS = {"facebook": _send_facebook, "instagram": _send_instagram, "tiktok": _send_tiktok}
@@ -122,12 +130,12 @@ SENDERS = {"facebook": _send_facebook, "instagram": _send_instagram, "tiktok": _
 
 def _account(root: Path, item: dict) -> dict | None:
     acc = _accounts(root).get(item["app"], {}).get(item["network"])
-    if not acc or not any(v for k, v in acc.items() if k != "token_secret"):
+    if not acc or not any(v for k, v in acc.items() if k not in ("token_secret", "key_secret", "via")):
         return None
     sec = acc.get("token_secret")
     if sec and not os.environ.get(sec):
         return None
-    if item["network"] == "tiktok" and not os.environ.get("BUFFER_API_KEY"):
+    if (acc.get("via") == "buffer" or item["network"] == "tiktok") and not os.environ.get(acc.get("key_secret", "BUFFER_API_KEY")):
         return None
     return acc
 
@@ -169,7 +177,7 @@ def run(root: Path, now: datetime.datetime, on_publishing=None) -> list[str]:
     done = []
     for item, acc, urls in ready:
         try:
-            item["remote_id"] = SENDERS[item["network"]](acc, item, urls)
+            item["remote_id"] = _send(acc, item, urls)
             item.update(status="published", error=None, published_at=_iso(now))
             done.append(item["id"])
         except TerminalError as e:

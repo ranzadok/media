@@ -81,3 +81,27 @@ def test_buffer_mutation_error_is_terminal():
     with pytest.raises(TerminalError) as e:
         buffer.post_tiktok("ch1", TOKEN, ITEM, URL)
     assert "channel disconnected" in str(e.value)
+
+
+@responses.activate
+def test_buffer_instagram_reel_gets_type_and_feed():
+    responses.post("https://api.buffer.com", json={"data": {"createPost": {"post": {"id": "b1", "dueAt": "x"}}}})
+    assert buffer.post("ch1", "KEY", ITEM, URL, service="instagram") == "b1"
+    sent = json.loads(responses.calls[0].request.body)["variables"]["i"]
+    assert sent["metadata"]["instagram"] == {"type": "reel", "shouldShareToFeed": True}
+    assert sent["assets"][0]["video"]["url"] == URL[0]
+
+
+@responses.activate
+def test_buffer_facebook_image_is_post():
+    responses.post("https://api.buffer.com", json={"data": {"createPost": {"post": {"id": "b2", "dueAt": "x"}}}})
+    buffer.post("ch2", "KEY", dict(ITEM, type="image"), ["https://x/a.png"], service="facebook")
+    sent = json.loads(responses.calls[0].request.body)["variables"]["i"]
+    assert sent["metadata"]["facebook"] == {"type": "post"}
+
+
+@responses.activate
+def test_buffer_list_channels_hides_nothing_secret():
+    responses.post("https://api.buffer.com", json={"data": {"account": {"organizations": [{"id": "o1", "name": "Beinenu"}]}}})
+    responses.post("https://api.buffer.com", json={"data": {"channels": [{"id": "c1", "name": "beinenu.app", "service": "tiktok"}]}})
+    assert buffer.list_channels("KEY") == [{"org": "Beinenu", "id": "c1", "name": "beinenu.app", "service": "tiktok"}]

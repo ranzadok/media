@@ -32,6 +32,7 @@ jobs:
           FB_TOKEN_148: ${{ secrets.FB_TOKEN_148 }}
           FB_TOKEN_BEINENU: ${{ secrets.FB_TOKEN_BEINENU }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_API_KEY_BEINENU: ${{ secrets.BUFFER_API_KEY_BEINENU }}
           NOW: ${{ github.event.inputs.now }}
         run: python -m publish run --push ${NOW:+--now "$NOW"}
       - name: save queue state
