@@ -1,52 +1,82 @@
 [
-  {
-    "file": "you-work.mp4",
-    "title": "אתה עובד. אנחנו דואגים להצעות.",
-    "published": "מתוזמן ל-21.11.2026 20:00"
-  },
-  {
-    "file": "money-lost.mp4",
-    "title": "הכסף הולך לפח: הצעות שלא נשלחו בזמן",
-    "published": ""
-  },
-  {
-    "file": "office-soon.mp4",
-    "title": "המשרד, בקרוב",
-    "published": ""
-  },
-  {
-    "file": "pain-solution.mp4",
-    "title": "כאב ופתרון",
-    "published": ""
-  },
-  {
-    "file": "no-missed-clients.mp4",
-    "title": "לא מפספסים יותר לקוחות",
-    "published": "נעצר ע\"י המפקח 22.11 (הוק אינסטלציה, הדגמה צילום). הוחלף ב-v2"
-  },
-  {
-    "file": "before-after.mp4",
-    "title": "לפני ואחרי",
-    "published": ""
-  },
-  {
-    "file": "promo-quote.mp4",
-    "title": "פרומו: הצעת מחיר בדיבור",
-    "published": "פורסם ידנית על ידי הבעלים לפני 21.11.2026"
-  },
-  {
-    "file": "promo-ai.mp4",
-    "title": "פרומו: AI לעצמאים",
-    "published": "פורסם ידנית על ידי הבעלים לפני 21.11.2026"
-  },
-  {
-    "file": "free-templates.mp4",
-    "title": "תבניות הצעת מחיר בחינם",
-    "published": ""
-  },
-  {
-    "file": "no-missed-clients-v2.mp4",
-    "title": "לא מפספסים יותר לקוחות (צילום, מתוקן)",
-    "published": "פורסם 23.11.2026 באינסטגרם, טיקטוק ופייסבוק"
-  }
+ {
+  "file": "you-work.mp4",
+  "title": "אתה עובד. אנחנו דואגים להצעות.",
+  "published": "מתוזמן ל-21.11.2026 20:00"
+ },
+ {
+  "file": "money-lost.mp4",
+  "title": "הכסף הולך לפח: הצעות שלא נשלחו בזמן",
+  "published": ""
+ },
+ {
+  "file": "office-soon.mp4",
+  "title": "המשרד, בקרוב",
+  "published": ""
+ },
+ {
+  "file": "pain-solution.mp4",
+  "title": "כאב ופתרון",
+  "published": ""
+ },
+ {
+  "file": "no-missed-clients.mp4",
+  "title": "לא מפספסים יותר לקוחות",
+  "published": "נעצר ע\"י המפקח 22.11 (הוק אינסטלציה, הדגמה צילום). הוחלף ב-v2"
+ },
+ {
+  "file": "before-after.mp4",
+  "title": "לפני ואחרי",
+  "published": ""
+ },
+ {
+  "file": "promo-quote.mp4",
+  "title": "פרומו: הצעת מחיר בדיבור",
+  "published": "פורסם ידנית על ידי הבעלים לפני 21.11.2026"
+ },
+ {
+  "file": "promo-ai.mp4",
+  "title": "פרומו: AI לעצמאים",
+  "published": "פורסם ידנית על ידי הבעלים לפני 21.11.2026"
+ },
+ {
+  "file": "free-templates.mp4",
+  "title": "תבניות הצעת מחיר בחינם",
+  "published": ""
+ },
+ {
+  "file": "no-missed-clients-v2.mp4",
+  "title": "לא מפספסים יותר לקוחות (צילום, מתוקן)",
+  "published": "פורסם 23.11.2026 באינסטגרם, טיקטוק ופייסבוק"
+ },
+ {
+  "file": "tagid-animation-pains.mp4",
+  "title": "אנימציה: הכאבים (לילה, לקוחות שהלכו, פתק לא מקצועי) → תגיד",
+  "published": "",
+  "note": "דמויות מאוירות מקוריות, מחירים להמחשה. נוצר 23.11.2026"
+ },
+ {
+  "file": "tagid-animation-plumber.mp4",
+  "title": "אנימציה: שרברב ולקוחה, מפתק להצעה מאושרת",
+  "published": "",
+  "note": "דמויות מאוירות מקוריות, מחירים להמחשה. נוצר 23.11.2026"
+ },
+ {
+  "file": "tagid-animation-electric.mp4",
+  "title": "אנימציה: חשמלאית ולקוח",
+  "published": "",
+  "note": "דמויות מאוירות מקוריות, מחירים להמחשה. נוצר 23.11.2026"
+ },
+ {
+  "file": "tagid-animation-painter.mp4",
+  "title": "אנימציה: צבע ולקוחה",
+  "published": "",
+  "note": "דמויות מאוירות מקוריות, מחירים להמחשה. נוצר 23.11.2026"
+ },
+ {
+  "file": "tagid-animation-ac.mp4",
+  "title": "אנימציה: טכנאי מזגנים ולקוח",
+  "published": "",
+  "note": "דמויות מאוירות מקוריות, מחירים להמחשה. נוצר 23.11.2026"
+ }
 ]
